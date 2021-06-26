@@ -1,0 +1,47 @@
+[
+    {
+        "desc": "asset_static_checks_1: asset with capacity and valid markets",
+        "asset": "asset_11",
+        "facts": {
+            "max_capacity": 100,     
+            "min_capacity": 0,
+			"valid_asset_markets": ["mkt_1", "mkt_2"]
+        }
+    },
+    {
+        "desc": "asset_static_checks_2",
+        "asset": "asset_22",
+        "facts": {
+            "max_capacity": 50,
+            "min_capacity": -50,
+			"valid_asset_markets": ["mkt_2"]
+        }
+    },
+    {
+        "desc": "market_product_static_checks_1: market to product with price limits",
+        "market": "mkt_1",
+		"product": "energy",
+        "facts": {
+            "max_price": 2000,
+            "min_price": -500
+        }
+    },
+    {
+        "desc": "market_product_static_checks_2",
+        "market": "mkt_2",
+		"product": "energy",
+        "facts": {
+            "max_price": 2000,
+            "min_price": -500
+        }
+    },
+    {
+        "desc": "market_product_static_checks_2: market to a different product with price limits",
+        "market": "mkt_1",
+		"product": "reserves",
+        "facts": {
+            "max_price": 300,
+            "min_price":   0
+        }
+    }
+]

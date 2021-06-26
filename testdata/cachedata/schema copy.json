@@ -1,0 +1,52 @@
+
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://tradeui.shell.com/trade-validation-schema.json",
+    "title": "Trades Validation Engine Schema",
+    "description": "Trade validation engine schema",
+    "type": "array",
+    "items": {"$ref": "#/definitions/trade"},
+    "definitions": {
+        "trade": {
+            "type": "object",
+            "title": "Trade",
+            "properties": {
+                "trade_id": {
+                    "type": "string",
+                    "minLength": 30
+                },
+                "start_date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "end_date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "portfolio": {
+                    "type": "string",
+                    "enum": [ "pfolio_1","pfolio_2", "pfolio_3", "pfolio_4", "pfolio_5"]
+                },
+                "asset": {
+                    "type": "string",
+                    "enum": [ "asset_1","asset_2", "asset_3", "asset_4", "asset_5"]
+                },
+                "market": {
+                    "type": "string",
+                    "enum": [ "mkt_1","mkt_2", "mkt_3","mkt_4", "mkt_5"]
+                },
+                "direction": {
+                    "type": "string",
+                    "enum": ["BUY", "SELL"]
+                },
+                "quantity": {
+                    "type": "number",
+                    "exclusiveMinimum": 0,
+                    "check_quantity": {"$data": {"trade": "1/0"}}
+                }
+            },
+            "required": ["start_date", "end_date", "portfolio", "asset", "market"],
+            "additionalProperties": true
+        }
+    }
+}

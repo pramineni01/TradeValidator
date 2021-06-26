@@ -1,0 +1,103 @@
+# query
+query ($trades: [Trade]){
+  ValidateTrades(trades: $trades) {
+    errors {
+      seq_id
+      keyword
+      field
+      value
+      error_message
+      allowed
+    }
+    success
+  }
+}
+
+# -------
+{
+  "trades": [{
+        "start_date": "2021-05-15T03:00:00+00:00",
+        "end_date": "2021-05-15T04:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_11",
+        "market": "mkt_1",
+    		"product": "energy",
+        "price": 4000,
+        "quantity": 1990
+    }
+]
+}
+
+# should see 2 errors
+
+
+# -------
+# query variables
+{
+  "trades": [{
+        "start_date": "2021-05-15",
+        "end_date": "2021-05-15T03:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_11",
+        "market": "mkt_1",
+        "price": 20,
+        "quantity": 200
+  }]
+}
+# -------
+{
+  "trades": [
+    {
+        "start_date": "2021-05-15T02:00:00+00:00",
+        "end_date": "2021-05-15T03:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_12",
+        "market": "mkt_1",
+        "price": 20,
+        "quantity": 1990
+    }
+]
+}
+
+# -------
+
+{
+  "trades": [
+    {
+        "start_date": "2021-05-15",
+        "end_date": "2021-05-15T03:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_11",
+        "market": "mkt_1",
+        "price": 20,
+        "quantity": 200
+    },
+    {
+        "start_date": "2021-05-15T01:00:00+00:00",
+        "end_date": "2021-05-15T02:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_100",
+        "market": "mkt_1",
+        "price": 1,
+        "quantity": 200
+    },
+    {
+        "start_date": "2021-05-15T01:00:00+00:00",
+        "end_date": "2021-05-15T02:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_11",
+        "market": "mkt_1",
+        "price": 1,
+        "quantity": 200
+    },
+    {
+        "start_date": "2021-05-15T02:00:00+00:00",
+        "end_date": "2021-05-15T03:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_12",
+        "market": "mkt_1",
+        "price": 20,
+        "quantity": 1990
+    }
+]
+}

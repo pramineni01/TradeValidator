@@ -1,0 +1,12 @@
+{
+    "DataSource": {
+        "Type": "LOCAL_FILE",
+        "SchemaSrc": "/testdata/cachedata/schema.json",
+        "FactsSrc": "/testdata/cachedata/facts.json",
+        "RunningValuesSrc": "/testdata/cachedata/runningvalues.json",
+
+        "InputData": {
+            "TradesSrc": "/testdata/trades/trades_with_errors.json"
+        }
+    }
+}

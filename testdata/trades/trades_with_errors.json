@@ -1,0 +1,38 @@
+[
+    {
+        "start_date": "2021-05-15",
+        "end_date": "2021-05-15T03:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_11",
+        "market": "mkt_1",
+        "price": 20,
+        "quantity": 200
+    },
+    {
+        "start_date": "2021-05-15T01:00:00+00:00",
+        "end_date": "2021-05-15T02:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_100",
+        "market": "mkt_1",
+        "price": 1,
+        "quantity": 200
+    },
+    {
+        "start_date": "2021-05-15T01:00:00+00:00",
+        "end_date": "2021-05-15T02:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_11",
+        "market": "mkt_1",
+        "price": 1,
+        "quantity": 200
+    },
+    {
+        "start_date": "2021-05-15T02:00:00+00:00",
+        "end_date": "2021-05-15T03:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_12",
+        "market": "mkt_1",
+        "price": 20,
+        "quantity": 1990
+    }
+]

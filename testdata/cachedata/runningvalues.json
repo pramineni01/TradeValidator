@@ -1,0 +1,50 @@
+[
+    {
+        "desc": "portfolio 1 - interval 1",
+        "start_date": "2021-05-15T01:00:00+00:00",
+        "end_date": "2021-05-15T02:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_11",
+        "market": "mkt_1",
+        "facts": {
+            "consumed_capacity": 100,
+            "last_price": 0
+        }
+    },
+    {
+        "desc": "portfolio 1 - interval 2",
+        "start_date": "2021-05-15T02:00:00+00:00",
+        "end_date": "2021-05-15T03:00:00+00:00",
+        "portfolio": "pfolio_1",
+        "asset": "asset_12",
+        "market": "mkt_1",
+        "facts": {
+            "consumed_capacity": 30,
+            "last_price": 2
+        }
+    },
+    {
+        "desc": "portfolio 2 - interval 1",
+        "start_date": "2021-05-15T03:00:00+00:00",
+        "end_date": "2021-05-15T04:00:00+00:00",
+        "portfolio": "pfolio_2",
+        "asset": "asset_21",
+        "market": "mkt_1",
+        "facts": {
+            "consumed_capacity": 20,
+            "last_price": 0
+        }
+    },
+    {
+        "desc": "portfolio 2 - interval 2",
+        "start_date": "2018-05-10T02:00:00+00:00",
+        "end_date": "2018-05-10T03:00:00+00:00",
+        "portfolio": "pfolio_2",
+        "asset": "asset_22",
+        "market": "mkt_1",
+        "facts": {
+            "consumed_capacity": 45,
+            "last_price": 5
+        }
+    }
+]

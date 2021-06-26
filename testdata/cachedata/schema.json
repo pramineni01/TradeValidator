@@ -1,0 +1,61 @@
+
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://tradeui.shell.com/trade-validation-schema.json",
+    "title": "Trades Validation Engine Schema",
+    "description": "Trade validation engine schema",
+    "type": "array",
+    "items": {"$ref": "#/definitions/trade"},
+    "definitions": {
+        "trade": {
+            "type": "object",
+            "title": "Trade",
+            "properties": {
+                "start_date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "end_date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "portfolio": {
+                    "type": "string",
+                    "enum": ["pfolio_1","pfolio_2", "pfolio_3", "pfolio_4", "pfolio_5"]
+                },
+                "asset": {
+                    "type": "string",
+                    "enum": ["asset_11","asset_12", "asset_13", "asset_14", "asset_15"],
+                    "check_asset_to_market": true
+                },
+                "market": {
+                    "type": "string",
+                    "enum": ["mkt_1","mkt_2", "mkt_3","mkt_4", "mkt_5"],
+                    "check_market_to_product": true
+                },
+                "product": {
+                    "type": "string",
+                    "enum": ["energy", "reserves"]
+                },
+                "direction": {
+                    "type": "string",
+                    "enum": ["BUY", "SELL"]
+                },
+                "price": {
+                    "type": "number",
+                    "exclusiveMinimum": 0,
+                    "check_price": false
+                },
+                "quantity": {
+                    "type": "number",
+                    "exclusiveMinimum": 0,
+                    "check_quantity": false,
+                    "check_quantity2": false
+
+                }
+            },
+            "required": ["start_date", "end_date", "portfolio", "asset", "market"],
+            "additionalProperties": true
+        }
+    }
+}
